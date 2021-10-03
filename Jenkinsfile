@@ -43,7 +43,7 @@ pipeline {
     }
 
     stage("Deploy"){
-      agent { node {label 'master'}}
+      agent { node {label 'thang-agent'}}
       steps{
         sh "helm --kubeconfig kubeconfig.yaml install -f helm-chart/values.yaml DeploywithHelm helm-chart/"
       }
