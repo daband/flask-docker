@@ -1,4 +1,4 @@
-image: daband20001809/docker-cicd:tagname
+image: daband20001809/docker-cicd:latest
 imagePullPolicy: IfNotPresent
 replicaCount: 1
 
