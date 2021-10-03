@@ -3,7 +3,7 @@ pipeline {
   agent none
 
   environment {
-    DOCKER_IMAGE = "daband20001809/docker-cicd:tagname"
+    DOCKER_IMAGE = "daband20001809/docker-cicd"
   }
 
   stages {
