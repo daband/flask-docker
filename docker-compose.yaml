@@ -1,6 +1,6 @@
 version: "3.3"
 services:
   flask-app:
-    image: daband20001809/docker-cicd:tagname
+    image: daband20001809/docker-cicd:latest
     ports:
       - "5000:5000"
