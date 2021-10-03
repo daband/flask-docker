@@ -41,11 +41,19 @@ pipeline {
         sh "docker image rm ${DOCKER_IMAGE}:latest"
       }
     }
+
+    stage("Deploy"){
+      agent { node {label 'master'}}
+      steps{
+        sh "helm --kubeconfig kubeconfig.yaml install -f helm-chart/values.yaml DeploywithHelm helm-chart/"
+      }
+    }
+
   }
 
   post {
     success {
-      echo "SUCCESdfsdfdsSFUL"
+      echo "SUCCESSFUL"
     }
     failure {
       echo "FAILED"
