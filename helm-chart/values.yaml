@@ -1,4 +1,4 @@
-image: nhtua/flask-docker:latest
+image: daband20001809/docker-cicd:tagname
 imagePullPolicy: IfNotPresent
 replicaCount: 1
 
