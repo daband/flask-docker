@@ -45,7 +45,7 @@ pipeline {
     stage("Deploy"){
       agent { node {label 'thang-agent'}}
       steps{
-        sh "helm --kubeconfig kubeconfig.yaml upgrade --install deploywithhelm helm-chart/"
+        sh "helm --kubeconfig kubethang.yaml upgrade --install deploywithhelm helm-chart/"
       }
     }
 
